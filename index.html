@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <title>adWitads</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+      <link rel="stylesheet" href="./Global.css">
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+      <script>
+         $(document).ready(function () {
+         
+         $('#example').DataTable({
+         
+         "searching": false,
+         "responsive":true,
+         "ordering":false,
+         "bLengthChange": false,
+         "bFilter": true,
+         "bInfo": false,
+         "paging": false,
+         //     "pagingType": "simple_numbers",
+         //    "lengthMenu": [ 1,2,3,4,5],
+         // "pageLength": 6,
+         "language": {
+         "paginate": {
+         "previous": "&lt;&lt;",
+         "next": "&gt;&gt;"
+         },
+         
+         },
+         
+         
+         });
+         
+         });
+         
+         
+      </script>
+   </head>
+   <body>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-dark >
+         <a class=" navbar-brand " href="#">
+         <img class="" src="./assets/new.jpg"  height="50" alt="logo"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText " aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link text-dark ml-3" href="#">Dashboard<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-dark ml-3" href="#">Workstation</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-dark ml-3" href="#">Reports</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-dark ml-3" href="#"><img src="https://img.icons8.com/sf-ultralight/25/000000/new-post.png"/></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-dark ml-3" href="#"><img src="https://img.icons8.com/ios/22/000000/ask-question.png"/></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-dark ml-3 mr-3" href="#"><img src="https://img.icons8.com/ios/22/000000/user-male-circle.png"/></a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <!-- navbar ends here -->
+      <!-- dropdown  start-->
+      <div class="btn-group ml-3 " style="width: 200px; ;">
+         <button class="btn border-dark ml-3 mt-4 text-left btn-sm rounded"  type="button">
+         <span>My Queue</span>
+         <img class="float-right" src="https://img.icons8.com/material/24/000000/sort-down--v1.png"/>
+         </button>
+         <div class="dropdown-menu">
+            ...
+         </div>
+      </div>
+      <!-- dropdown ends here -->
+      <!-- search bar with filters starts here -->
+      <div class="btn-toolbar mb-3 ml-2 pl-2  pt-4  col " role="toolbar" aria-label="Toolbar with button groups">
+         <div class="btn-group  col " role="group" aria-label="First group" >
+            <button type="button" class="btn  border border-dark col-sm " style="background-color: #AED1E6; color:
+               white"  >All(6)</button>
+            <button type="button" class="btn btn-light border border-dark col-sm" >Revision(2)</button>
+            <button type="button" class="btn btn-light border border-dark col-sm" >New Ads(2)</button>
+            <button type="button" class="btn btn-light border border-dark col-sm">QA(3)</button>
+            <button type="button" class="btn btn-light border border-dark col-sm ">Design Check(1)</button>
+            <button type="button" class="btn btn-light border border-dark col-sm ">Proof Sent(1)</button>
+         </div>
+         <div class="input-group">
+            <input type="text" class="form-control  border-dark"  style="width: 130px; border-radius:20px;" placeholder="&#xF002; " aria-label="Input group example" aria-describedby="btnGroupAddon"> 
+         </div>
+      </div>
+      <!-- search bar with filter ends here -->
+      <!-- Jquery data table -->
+      <table id="example" class="display-stripe  cell-border" style="width:95%; margin: 0 auto; text-align: center;">
+         <thead class="" style="background-color: #CFE8EF;">
+            <tr >
+               <th>Order Date</th>
+               <th>Order  Type</th>
+               <th>AdwitADS ID</th>
+               <th>Unique Job Number</th>
+               <th>Advetiser Name</th>
+               <th>Ad Rep Name</th>
+               <th>Status</th>
+               <th>Proiority</th>
+               <th>Action</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>22nd Feb <br> 2022</td>
+               <td>Print</td>
+               <td>2222 2222</td>
+               <td>Koch and Sons</td>
+               <td>Janice Monahan</td>
+               <td>Janice Monhana</td>
+               <td>In <br> Production </td>
+               <td>1</td>
+               <td>
+                  <button type="button" class="btn " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"  style="border:none; border-radius: 7px; background-color:#CFE8EF; width: 80%; " >Take Over</button>
+               </td>
+            </tr>
+            <tr>
+               <td>23rd Feb <br> 2022 </td>
+               <td>Online</td>
+               <td>3333 3333</td>
+               <td>Stueber LLC</td>
+               <td>Rollin Fadel</td>
+               <td>Rollin Fadel</td>
+               <td>Order <br> Accepted </td>
+               <td>4</td>
+               <td>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo" style="border:none; border-radius: 7px; background-color:#AED1E6; " >Start Design</button>
+               </td>
+            </tr>
+            <!-- this is the modal of above button -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header bg-dark text-light">
+                     <h5 class="modal-title" id="exampleModalLabel">StartDesign-NewAd</h5>
+                     <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <form>
+                        <div class="form-group">
+                           <label for="recipient-name" class="col-form-label" style="text-decoration:underline"> <b>Order Information</b>  </label><br>
+                           <label for="message-text" class="col-form-label">Publication Name:</label>
+                           <label for="message-text" class="col-form-label" style="position: relative;left:170px ;">Category:</label> <br>
+                           <label for="message-text" class="col-form-label">Advetiser Name:</label>
+                           <label for="message-text" class="col-form-label"style="position: relative;left:180px ;">CSR Instruction:</label> <br>
+                           <label for="message-text" class="col-form-label">Type of Ad: Print/Web</label>
+                           <label for="message-text" class="col-form-label" style="position: relative;left:144px ;">Rush/Standard:</label>
+                     </form>
+                     </div>
+                     <div class="modal-footer" style="display:flex; justify-content: center;">
+                        <button type="button" class="btn rounded  " style="background-color: #CFE8EF;" data-dismiss="modal">Download InDesign and Start</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- this modal is ending here -->
+            <tr>
+               <td>24th Feb <br> 2022 </td>
+               <td>Page</td>
+               <td>4444 4444</td>
+               <td>Konopelski <br> Group </td>
+               <td>Lera Stroman</td>
+               <td>Lera Stroman</td>
+               <td>Revision <br> Submitted </td>
+               <td>5</td>
+               <td>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="border:none; border-radius: 7px; background-color:#AED1E6; " >Start Design</button>
+               </td>
+            </tr>
+            <!-- This is a modal of above button -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header bg-dark text-light">
+                        <h5 class="modal-title" id="exampleModalLabel">Start Design Revision</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
+                        <form>
+                           <div class="form-group">
+                              <label for="recipient-name" class="col-form-label">Notes & Instruction</label>
+                              <input type="text" class="form-control" id="recipient-name" style="border: 1px dashed black; height:70px ;">
+                           </div>
+                           <hr>
+                           <div class="form-group">
+                              <label for="message-text" class="col-form-label">Download/View Files</label> <br>
+                              <button type="button" class="btn  border rounded">Make Up PDF</button>
+                              <button type="button" class="btn border rounded">Assets</button>
+                           </div>
+                           <hr class="new1">
+                           <div class="form-group">
+                              <label for="message-text" class="col-form-label">Download/View Files</label> <br>
+                              <span style="color: black;   "><b>Version 2</b></span>
+                              <button type="button" class="btn  border rounded ml-3">Make Up PDF</button>
+                              <button type="button" class="btn border rounded">Assets</button> <br> <br>
+                              <span style="color: black;   "> <b>Version 1</b> </span>
+                              <button type="button" class="btn  border rounded ml-3">Assets</button>
+                              <button type="button" class="btn border rounded">Native Files</button>
+                              <button type="button" class="btn border rounded">Proof</button>
+                           </div>
+                        </form>
+                     </div>
+                     <div class="modal-footer" style="display:flex; justify-content: center;">
+                        <button type="button" class="btn rounded  " style="background-color: #CFE8EF;" data-dismiss="modal">Download InDesign and Start</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- this modal ends here -->
+            <tr>
+               <td>25th Feb <br> 2022 </td>
+               <td>Page</td>
+               <td>5555 5555</td>
+               <td>Harber Inc</td>
+               <td>Adan Schiller</td>
+               <td>Adan Schiller</td>
+               <td>Proof Sent</td>
+               <td>6</td>
+               <td>
+                  <img type="button" class="btn" data-toggle="modal" data-target="#exampleModal11" data-whatever="@mdo" src="https://img.icons8.com/ios-filled/17/000000/visible--v1.png"/>
+                  <img type="button" class="btn" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo" src="https://img.icons8.com/ios/15/000000/pdf--v1.png"/>
+               </td>
+            </tr>
+            <!-- we will make the modal of two buttons -->
+            <!-- first modal for the eye button -->
+            <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg " >
+            <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+               <h5 class="modal-title" id="exampleModalLabel">View Order-{AdwitAds ID}-{Unique Job ID}</h5>
+               <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="d-flex">
+                  <div style="border: 1px solid black;border-radius: 8px; width: 40%;height: 30vh; margin-right: 3rem; margin-bottom: 2rem;margin-left: 3rem;">
+                     <div class="modal-header " style="background-color: #AED1E6; height: 6vh;">
+                        <h5>Order Details</h5>
+                     </div>
+                     <div>
+                        <ul style="list-style-type:none ; " class="pl-3 mt-2">
+                           <li>Order Date:</li>
+                           <li>Publish Date:</li>
+                           <li>Tyoe of Ad: Print/Web</li>
+                           <li>Color of Ad:</li>
+                           <li>Size of Ad:</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div style="border: 1px solid black;border-radius: 8px; width: 40%;height: 30vh; margin-right: 3rem; margin-bottom: 2rem;margin-left: 1rem">
+                     <div class="modal-header " style="background-color: #AED1E6; height: 6vh;">
+                        <h5>Order Details</h5>
+                     </div>
+                     <div>
+                        <ul style="list-style-type:none ; " class="pl-3 mt-2">
+                           <li>Order Date:</li>
+                           <li>Publish Date:</li>
+                           <li>Tyoe of Ad: Print/Web</li>
+                           <li>Color of Ad:</li>
+                           <li>Size of Ad:</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-flex">
+                  <div style="border: 1px solid black;border-radius: 8px; width: 40%;height: 30vh; margin-right: 3rem; margin-bottom: 2rem;margin-left: 3rem">
+                     <div class="modal-header " style="background-color: #AED1E6; height: 6vh;">
+                        <h5>Order Details</h5>
+                     </div>
+                     <div>
+                        <ul style="list-style-type:none ; " class="pl-3 mt-2">
+                           <li>Order Date:</li>
+                           <li>Publish Date:</li>
+                           <li>Tyoe of Ad: Print/Web</li>
+                           <li>Color of Ad:</li>
+                           <li>Size of Ad:</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div style="border: 1px solid black;border-radius: 8px; width: 40%;height: 30vh; margin-right: 3rem; margin-bottom: 2rem;margin-left: 1rem">
+                     <div class="modal-header " style="background-color: #AED1E6; height: 6vh;">
+                        <h5>Order Details</h5>
+                     </div>
+                     <div>
+                        <ul style="list-style-type:none ; " class="pl-3 mt-2">
+                           <li>Order Date:</li>
+                           <li>Publish Date:</li>
+                           <li>Tyoe of Ad: Print/Web</li>
+                           <li>Color of Ad:</li>
+                           <li>Size of Ad:</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- modal of the eye button ends here -->
+            <!-- modal of the pdf -->
+            <div class="modal fade" id="exampleModa0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header bg-dark text-light">
+                     <h5 class="modal-title" id="exampleModalLabel">StartDesign-NewAd</h5>
+                     <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <form>
+                        <div class="form-group">
+                           <label for="recipient-name" class="col-form-label" style="text-decoration:underline"> <b>Order Information</b>  </label><br>
+                           <label for="message-text" class="col-form-label">Publication Name:</label>
+                           <label for="message-text" class="col-form-label" style="position: relative;left:170px ;">Category:</label> <br>
+                           <label for="message-text" class="col-form-label">Advetiser Name:</label>
+                           <label for="message-text" class="col-form-label"style="position: relative;left:180px ;">CSR Instruction:</label> <br>
+                           <label for="message-text" class="col-form-label">Type of Ad: Print/Web</label>
+                           <label for="message-text" class="col-form-label" style="position: relative;left:144px ;">Rush/Standard:</label>
+                     </form>
+                     </div>
+                     <div class="modal-footer" style="display:flex; justify-content: center;">
+                        <button type="button" class="btn rounded  " style="background-color: #CFE8EF;" data-dismiss="modal">Download InDesign and Start</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- modal of the pdg ends here -->
+            <tr>
+               <td>26th Feb <br> 2022 </td>
+               <td>Online</td>
+               <td>6666 6666</td>
+               <td>Apple Inc</td>
+               <td>Joe Root</td>
+               <td>Joe Root</td>
+               <td>Design Check</td>
+               <td>3</td>
+               <td>
+                  <img type="button" class="btn" data-toggle="modal" data-target="#exampleModal11" data-whatever="@mdo" src="https://img.icons8.com/ios-filled/17/000000/visible--v1.png"/>
+                  <img type="button" class="btn" data-toggle="modal" data-target="#exampleModal12" data-whatever="@mdo" src="https://img.icons8.com/ios/15/000000/pdf--v1.png"/>
+               </td>
+            </tr>
+            <tr>
+               <td>26th Feb 2022</td>
+               <td>Online</td>
+               <td>6666 6666</td>
+               <td>Apple Inc</td>
+               <td>Joe Root</td>
+               <td>Joe Root</td>
+               <td>In QA</td>
+               <td>2</td>
+               <td>
+                  <img type="button" class="btn" data-toggle="modal" data-target="#exampleModal11" data-whatever="@mdo" src="https://img.icons8.com/ios-filled/17/000000/visible--v1.png"/>
+                  <img type="button" class="btn" data-toggle="modal" data-target="#exampleModal12" data-whatever="@mdo" src="https://img.icons8.com/ios/15/000000/pdf--v1.png"/>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <!-- end of the jqury table -->
+      <!-- pagination starts here -->
+      <div class="reponsivepagination text-dark ">
+         <nav class="pagify mr-2 pr-4 " aria-label="Page navigation example" >
+            <ul class="pagination   ">
+               <li class="page-item">
+                  <a class="page-link text-dark" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  </a>
+               </li>
+               <li class="page-item "><a class="page-link text-dark" href="#">1</a></li>
+               <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+               <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+               <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
+               <li class="page-item"><a class="page-link text-dark" href="#">5</a></li>
+               <li class="page-item">
+                  <a class="page-link text-dark" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  </a>
+               </li>
+            </ul>
+         </nav>
+      </div>
+      <!-- pagination ends here -->
+      <!-- footer part is starting here -->
+      <div class="footer">
+         <article>
+            <div>FAQ'S</div>
+            <div>Contact Us</div>
+         </article>
+      </div>
+      <!-- footer part ends here -->
+      <!-- CDN links required for using bootstrap and jquery -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+   </body>
+</html>
